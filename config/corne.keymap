@@ -20,11 +20,30 @@
         };
     };
 
+    behaviors {
+        com_excl: com_excl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COM_EXCL";
+            bindings = <&kp COMMA>, <&kp LS(NUMBER_1)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        dot_ques: dot_ques {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_QUES";
+            bindings = <&kp DOT>, <&kp LS(MINUS)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-
             bindings = <
 &none  &kp Q  &kp B  &kp L        &kp R                     &kp ESCAPE    &kp SQT     &kp W      &kp U   &kp D  &kp Z  &none
 &none  &kp S  &kp N  &kp T        &kp H                     &kp Y         &kp G       &kp O      &kp E   &kp A  &kp I  &none
@@ -34,7 +53,6 @@
         };
 
         lower_layer {
-
             bindings = <
 &trans  &kp LS(NUMBER_6)  &kp EQUAL            &kp RA(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_3)    &kp N6         &kp N7        &kp N8        &kp N9        &kp GRAVE     &trans
 &trans  &kp NUBS          &kp RA(NUMBER_7)     &kp RA(NUMBER_8)  &kp LS(NUMBER_8)  &kp RA(N2)          &kp LEFT       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp NUMBER_0  &trans
@@ -44,8 +62,6 @@
         };
 
         raise_layer {
-
-
             bindings = <
 &trans  &kp LC(Z)     &kp LA(LEFT)  &kp LC(TAB)  &kp TAB            &kp LC(LA(LG(T)))    &kp END  &kp PAGE_DOWN      &kp UP         &kp PG_UP   &kp HOME    &trans
 &trans  &sk LEFT_GUI  &sk LEFT_ALT  &sk RCTRL    &sk LEFT_SHIFT     &tog 2               &sl 3    &kp LEFT           &kp DOWN       &kp RIGHT   &tog 4      &trans
