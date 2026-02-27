@@ -13,10 +13,9 @@
     combos {
         compatible = "zmk,combos";
 
-        colon {
-            bindings = <&kp LS(DOT)>;
+        colons {
+            bindings = <&semi_colon>;
             key-positions = <29 30>;
-            layers = <0>;
         };
     };
 
@@ -28,6 +27,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
 
         dot_ques: dot_ques {
@@ -37,6 +37,194 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        semi_colon: semi_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEMI_COLON";
+            bindings = <&kp LS(PERIOD)>, <&kp LS(COMMA)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        apo_quot: apo_quot {
+            compatible = "zmk,behavior-mod-morph";
+            label = "APO_QUOT";
+            bindings = <&kp NUHS>, <&kp RA(NUMBER_2)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_RALT)>;
+        };
+
+        parentheses: parentheses {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PARENTHESES";
+            bindings = <&kp LS(N8)>, <&kp LS(NUMBER_9)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        brackets: brackets {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BRACKETS";
+            bindings = <&kp RA(NUMBER_8)>, <&kp RA(NUMBER_9)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_RALT)>;
+        };
+
+        curly: curly {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CURLY";
+            bindings = <&kp RA(NUMBER_7)>, <&kp RA(NUMBER_0)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_RALT)>;
+        };
+
+        small_great: small_great {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SMALL_GREAT";
+            bindings = <&kp NON_US_BACKSLASH>, <&kp LS(NON_US_BSLH)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        percent_and: percent_and {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PERCENT_AND";
+            bindings = <&kp LS(NUMBER_5)>, <&kp LS(NUMBER_6)>;
+
+            #binding-cells = <0>;
+            keep-mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        dollar_eur: dollar_eur {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOLLAR_EUR";
+            bindings = <&kp RA(NUMBER_4)>, <&kp RA(NUMBER_5)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_RALT)>;
+        };
+
+        slashes: slashes {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SLASHES";
+            bindings = <&kp LS(NUMBER_7)>, <&kp RA(MINUS)>;
+
+            #binding-cells = <0>;
+            keep-mods = <(MOD_RALT)>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        underscore_vertical: underscore_vertical {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UNDERSCORE_VERTICAL";
+            bindings = <&kp LS(SLASH)>, <&kp RA(NUBS)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_RALT)>;
+        };
+
+        multi_exp: multi_exp {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MULTI_EXP";
+            bindings = <&kp LS(NUHS)>, <&kp LS(RIGHT_BRACKET)>;
+
+            #binding-cells = <0>;
+            keep-mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        plus_equal: plus_equal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PLUS_EQUAL";
+            bindings = <&kp MINUS>, <&kp LS(NUMBER_0)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        copy_paste: copy_paste {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COPY_PASTE";
+            bindings = <&kp LC(C)>, <&kp LC(V)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        alt_arrows: alt_arrows {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_ARROWS";
+            bindings = <&kp LA(LEFT)>, <&kp LA(RIGHT)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LALT)>;
+        };
+
+        media_next: media_next {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MEDIA_NEXT";
+            bindings = <&kp C_NEXT>, <&kp C_PREV>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        volume: volume {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VOLUME";
+            bindings = <&kp C_VOL_DN>, <&kp C_VOLUME_UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        delete: delete {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DELETE";
+            bindings = <&mt LEFT_SHIFT BACKSPACE>, <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        minus_tilde: minus_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MINUS_TILDE";
+            bindings = <&kp SLASH>, <&kp RA(RIGHT_BRACKET)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_RALT)>;
+        };
+
+        zoom: zoom {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ZOOM";
+            bindings = <&kp LC(MINUS)>, <&kp LC(SLASH)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LCTL)>;
         };
     };
 
@@ -45,37 +233,37 @@
 
         default_layer {
             bindings = <
-&none  &kp Q  &kp B  &kp L        &kp R                     &kp ESCAPE    &kp SQT     &kp W      &kp U   &kp D  &kp Z  &none
-&none  &kp S  &kp N  &kp T        &kp H                     &kp Y         &kp G       &kp O      &kp E   &kp A  &kp I  &none
-&none  &kp X  &kp M  &kp C        &kp F                     &kp COMMA     &kp PERIOD  &kp P      &kp V   &kp K  &kp J  &none
-                     &key_repeat  &mt LEFT_SHIFT BACKSPACE  &mo 2         &mo 1       &kp SPACE  &tog 4
+&none  &kp Q  &kp B  &kp L        &kp R    &kp ESCAPE    &apo_quot  &kp W      &kp U   &kp D  &kp Z  &none
+&none  &kp S  &kp N  &kp T        &kp H    &kp Y         &kp G      &kp O      &kp E   &kp A  &kp I  &none
+&none  &kp X  &kp M  &kp C        &kp F    &com_excl     &dot_ques  &kp P      &kp V   &kp K  &kp J  &none
+                     &key_repeat  &delete  &mo 2         &mo 1      &kp SPACE  &tog 4
             >;
         };
 
         lower_layer {
             bindings = <
-&trans  &kp LS(NUMBER_6)  &kp EQUAL            &kp RA(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_3)    &kp N6         &kp N7        &kp N8        &kp N9        &kp GRAVE     &trans
-&trans  &kp NUBS          &kp RA(NUMBER_7)     &kp RA(NUMBER_8)  &kp LS(NUMBER_8)  &kp RA(N2)          &kp LEFT       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp NUMBER_0  &trans
-&trans  &kp SLASH         &kp LS(NON_US_HASH)  &kp LS(NUMBER_7)  &kp LS(SLASH)     &kp MINUS           &kp LC(SPACE)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_GUI  &trans
-                                               &trans            &trans            &trans              &trans         &trans        &trans
+&trans  &kp LG(E)     &kp EQUAL   &dollar_eur  &percent_and          &kp LS(NUMBER_3)    &kp LS(PRINTSCREEN)  &kp N7        &kp N8        &kp N9        &kp GRAVE     &trans
+&trans  &small_great  &curly      &brackets    &parentheses          &kp RA(N2)          &tog 1               &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp NUMBER_0  &trans
+&trans  &minus_tilde  &multi_exp  &slashes     &underscore_vertical  &plus_equal         &kp LC(SPACE)        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_GUI  &trans
+                                  &trans       &trans                &trans              &trans               &trans        &trans
             >;
         };
 
         raise_layer {
             bindings = <
-&trans  &kp LC(Z)     &kp LA(LEFT)  &kp LC(TAB)  &kp TAB            &kp LC(LA(LG(T)))    &kp END  &kp PAGE_DOWN      &kp UP         &kp PG_UP   &kp HOME    &trans
-&trans  &sk LEFT_GUI  &sk LEFT_ALT  &sk RCTRL    &sk LEFT_SHIFT     &tog 2               &sl 3    &kp LEFT           &kp DOWN       &kp RIGHT   &tog 4      &trans
-&trans  &kp LG(V)     &kp LC(C)     &kp ENTER    &kp LC(BACKSPACE)  &tog 0               &tog 2   &kp LC(LS(LA(T)))  &kp LC(ENTER)  &kp C_NEXT  &kp C_PLAY  &trans
-                                    &trans       &trans             &trans               &trans   &trans             &trans
+&trans  &kp LC(Z)     &alt_arrows   &kp LC(TAB)  &kp TAB            &zoom           &kp END  &kp PAGE_DOWN  &kp UP         &kp PG_UP    &kp HOME    &trans
+&trans  &sk LEFT_GUI  &sk LEFT_ALT  &sk RCTRL    &sk LEFT_SHIFT     &tog 2          &sl 3    &kp LEFT       &kp DOWN       &kp RIGHT    &tog 4      &trans
+&trans  &kp LG(V)     &copy_paste   &kp ENTER    &kp LC(BACKSPACE)  &kp LEFT_WIN    &tog 2   &kp LA(LG(W))  &kp LC(LA(T))  &media_next  &kp C_PLAY  &trans
+                                    &trans       &trans             &trans          &trans   &trans         &trans
             >;
         };
 
         layer_3 {
             bindings = <
-&none  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR              &none       &kp F7  &kp F8  &kp F9  &kp F10  &none
-&none  &sk LGUI       &sk LALT       &sk LCTRL     &sk LSHFT     &kp C_AL_MY_COMPUTER    &none       &kp F4  &kp F5  &kp F6  &kp F11  &none
-&none  &none          &none          &kp C_MUTE    &kp C_STOP    &kp C_VOL_DN            &caps_word  &kp F1  &kp F2  &kp F3  &kp F12  &none
-                                     &trans        &trans        &trans                  &trans      &trans  &trans
+&none  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR              &none          &kp F7  &kp F8  &kp F9  &kp F10  &none
+&none  &sk LGUI       &sk LALT       &sk LCTRL     &sk LSHFT     &kp C_AL_MY_COMPUTER    &kp LC(LA(L))  &kp F4  &kp F5  &kp F6  &kp F11  &none
+&none  &none          &none          &kp C_MUTE    &kp C_STOP    &volume                 &caps_word     &kp F1  &kp F2  &kp F3  &kp F12  &none
+                                     &trans        &trans        &trans                  &trans         &trans  &trans
             >;
         };
 
